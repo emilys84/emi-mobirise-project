@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html amp>
 <head>
-  <!-- Site made with Mobirise Website Builder v4.8.1, https://mobirise.com -->
+  <!-- Site made with Mobirise Website Builder v4.8.4, https://mobirise.com -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v4.8.1, mobirise.com">
+  <meta name="generator" content="Mobirise v4.8.4, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/emilia-reilly-photography-gold-logo-132x76.png" type="image/x-icon">
   <meta name="description" content="">
@@ -31,7 +31,7 @@ body{font-family: Lato;}blockquote{border-color: #b69e59;}div[submit-success]{ba
   
   
 </head>
-<body><amp-sidebar id="sidebar" class="cid-qYJgesh1JC" layout="nodisplay" side="right">
+<body><div id="top-page"></div>                                         <amp-animation id="showScrollToTopAnim" layout="nodisplay">                                             <script type="application/json">                                             {                                                 "duration": "200ms",                                                 "fill": "both",                                                 "iterations": "1",                                                 "direction": "alternate",                                                 "animations": [                                                     {                                                         "selector": "#scrollToTopButton",                                                         "keyframes": [                                                             { "opacity": "0.4", "visibility": "visible" }                                                         ]                                                     }                                                 ]                                             }                                             </script>                                         </amp-animation>                                         <amp-animation id="hideScrollToTopAnim" layout="nodisplay">                                             <script type="application/json">                                             {                                                 "duration": "200ms",                                                 "fill": "both",                                                 "iterations": "1",                                                 "direction": "alternate",                                                 "animations": [                                                     {                                                         "selector": "#scrollToTopButton",                                                         "keyframes": [                                                             { "opacity": "0", "visibility": "hidden" }                                                         ]                                                     }                                                 ]                                             }                                             </script>                                         </amp-animation>                                         <div id="scrollToTopMarker">                                             <amp-position-observer on="enter:hideScrollToTopAnim.start; exit:showScrollToTopAnim.start" layout="nodisplay">                                             </amp-position-observer>                                         </div><amp-sidebar id="sidebar" class="cid-qYJgesh1JC" layout="nodisplay" side="right">
         <div class="builder-sidebar" id="builder-sidebar">
             <button on="tap:sidebar.close" class="close-sidebar">
                 <span></span>
@@ -628,7 +628,7 @@ body{font-family: Lato;}blockquote{border-color: #b69e59;}div[submit-success]{ba
                 </div>
                 <div class="col-wrap">
                     <div data-form-type="formoid">
-                        <form class="mbr-form" method="post" target="_top" action-xhr="https://formoid.net/api/amp-form/push" data-form-title="Mobirise Form"><input type="hidden" name="email" data-form-email="true" value="Q9nGIUC9aDrdOxs0V8uuiFQYCC3IbfIwBIg/mBp+hEKDvJfO4UpQOVcJXYaRitm5EjXkcsSh//8ccqO226DFh3yMFesbD+xqlk0DiErwya/jv10y/rymXe0RiNQwg5tK">
+                        <form class="mbr-form" method="post" target="_top" action-xhr="https://formoid.net/api/amp-form/push" data-form-title="Mobirise Form"><input type="hidden" name="email" data-form-email="true" value="dtD/lA+WniAVRy8TlCOjy09B09p5dQ3E5p6A0wN5fwmZLHIA9gBWHWQWheK1Y2nkHtzGQ/kOLOsITzR5VvM1mUWrm5/KWDSPXUotTa3jafsyF9Sd/yEB0G5sJSWMJ5Qw">
                             <div submit-success="">
                                 <template data-form-alert="" type="amp-mustache">Subscription successful!</template>
                             </div>
@@ -682,5 +682,5 @@ body{font-family: Lato;}blockquote{border-color: #b69e59;}div[submit-success]{ba
 
   
   
-</body>
+<button id="scrollToTopButton" on="tap:top-page.scrollTo(duration=200)">                                         <a class="scroll-to-top-arrow"></a>                                     </button></body>
 </html>
