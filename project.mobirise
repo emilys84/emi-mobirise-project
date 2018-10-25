@@ -34,7 +34,7 @@
     "path": "@PROJECT_PATH@",
     "versionFirst": "4.8.1",
     "siteFonts": [],
-    "uniqCompNum": 236,
+    "uniqCompNum": 237,
     "versionPublish": "4.8.1",
     "screenshot": "screenshot.png",
     "favicon": "",
@@ -16204,56 +16204,89 @@
       "components": [
         {
           "_styles": {
-            "& when not (@fullWidth)": {
+            "& when not (@fullScreen)": {
               "padding-top": "(@paddingTop * 15px)",
               "padding-bottom": "(@paddingBottom * 15px)"
             },
-            "background-color": "@bgColor",
-            ".image-block": {
-              "position": "relative",
-              "margin": "auto",
-              "width": "~\"@{videoSize}%\"",
-              "& when (@fullWidth)": {
-                "width": "100% !important"
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
               }
             },
-            "& when (@showText)": {
-              ".mbr-figure-caption": {
-                "position": "absolute",
-                "left": "0",
-                "right": "0",
-                "& when (@captionPos)": {
-                  "bottom": "0"
-                },
-                "& when not (@captionPos)": {
-                  "top": "0"
-                },
-                "&:before": {
-                  "content": "\" \"",
-                  "position": "absolute",
-                  "top": "0",
-                  "left": "0",
-                  "width": "100%",
-                  "height": "100%",
-                  "background": "@captionBg",
-                  "opacity": "@captionOpacity"
-                },
-                ".mbr-text": {
-                  "padding": ".5rem 1rem",
-                  "position": "relative"
+            ".underline": {
+              "padding-top": ".5rem",
+              ".line": {
+                "width": "5rem",
+                "height": "1px",
+                "display": "inline-block",
+                "background-color": "@underlineColor",
+                "transition": "width .3s"
+              }
+            },
+            "& when (@showTitle) and (@showSubtitle)": {
+              ".mbr-section-subtitle": {
+                "padding-top": "1rem"
+              }
+            },
+            ".title-wrap:hover": {
+              ".line": {
+                "width": "6rem"
+              }
+            },
+            ".title-wrap": {
+              "padding-bottom": "2rem"
+            },
+            ".carousel-img": {
+              "width": "100%",
+              "text-align": "center",
+              "display": "flex",
+              "justify-content": "center",
+              "align-items": "center"
+            },
+            ".amp-carousel-button": {
+              "width": "50px",
+              "height": "50px",
+              "border-radius": "50%"
+            },
+            "img.mbr-temp": {
+              "width": "auto"
+            },
+            "& when (@showText), (@showButtons)": {
+              "& when (@showText) and (@showButtons)": {
+                ".mbr-section-btn": {
+                  "padding-top": "2rem"
                 }
               }
             },
-            "@media (max-width: 767px)": {
-              ".image-block": {
-                "width": "100% !important"
+            "& when (@showBullets)": {
+              ".dots-wrapper": {
+                "justify-content": "center",
+                "display": "flex"
+              },
+              ".dots span": {
+                "display": "inline-block",
+                "border-radius": "6px",
+                "border": "2px solid @bulletsColor",
+                "width": "12px",
+                "height": "12px",
+                "margin": "4px",
+                "box-shadow": "0 0 3px rgba(22, 22, 22, 0.3)",
+                "outline": "none"
+              },
+              ".dots span.current": {
+                "background-color": "@activeBullet"
               }
             }
           },
-          "_name": "image1",
-          "_customHTML": "<section class=\"image1\" group=\"Images & Videos\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline title=\"Width\" name=\"videoSize\" min=\"20\" max=\"100\" value=\"66\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"checkbox\" title=\"Show Caption\" name=\"showText\">\n        <input type=\"color\" title=\"Caption BG Color\" name=\"captionBg\" value=\"#ffffff\" condition=\"showText\">\n        <input type=\"range\" inline title=\"Caption Opacity\" name=\"captionOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"showText\">\n        <input type=\"checkbox\" title=\"Caption on Top/Bottom\" name=\"captionPos\" checked condition=\"showText\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" condition=\"!fullWidth\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': fullWidth == false}\">\n        <div class=\"image-block\">\n            <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/christmas-minis-2018-945x756.jpg\" layout=\"responsive\" width=\"1408.75\" height=\"1127\" alt=\"Mobirise\">\n                <div placeholder>\n                    <div class=\"mobirise-spinner\">\n                        <em></em>\n                        <em></em>\n                        <em></em>\n                    </div>\n                </div>\n                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/christmas-minis-2018-945x756.jpg\" alt=\"Mobirise\" title>\n            </amp-img>\n            <div class=\"mbr-figure-caption\" mbr-if=\"showText\">\n                <p mbr-text class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                    Create awesome websites!\n                </p>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "r7udVOoBwi",
-          "_anchor": "image1-6a",
+          "_name": "slider2",
+          "_customHTML": "<section class=\"slider2 slider slider-with-bullets\" group=\"Carousels &amp; Sliders\" plugins=\"amp-main, amp-carousel, amp-bind\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen Bg\" name=\"fullScreen\" checked=\"\">\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\" condition=\"fullScreen == false\">\n    \n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Underline\" name=\"showUnderline\" checked=\"\" condition=\"showTitle\">\n        <input type=\"color\" title=\"Underline Color\" name=\"underlineColor\" value=\"#b69e59\" condition=\"showUnderline &amp;&amp; showTitle\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"checkbox\" title=\"Autoplay\" name=\"autoplay\">\n        <input type=\"range\" inline=\"\" title=\"Delay\" name=\"delay\" min=\"1000\" max=\"5000\" step=\"1000\" value=\"3000\" condition=\"autoplay\">\n        <input type=\"checkbox\" title=\"Show Bullets\" name=\"showBullets\">\n        <input type=\"color\" title=\"Bullets Color\" name=\"bulletsColor\" value=\"#ffffff\" condition=\"showBullets\">\n        <input type=\"color\" title=\"Active Bullet Color\" name=\"activeBullet\" value=\"#b69e59\" condition=\"showBullets\">\n        <select title=\"Images\" name=\"imagesAmount\">\n            <option value=\"2\" selected=\"\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\">6</option>\n        </select>\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected=\"\">\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked=\"\" condition=\"bg.type!='color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"bg.type!='color' &amp;&amp; overlay\">\n        <input type=\"range\" inline=\"\" title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"bg.type!='color' &amp;&amp; overlay\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay &amp;&amp; bg.type !== 'color'\"></div>\n    <div class=\"container\">\n        <div class=\"title-wrap align-center\" mbr-if=\"showTitle || showSubtitle\">\n            <h1 class=\"mbr-section-title mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title, .underline\">EMILIA REILY PHOTOGRAPHY</h1>\n            <div class=\"underline\" mbr-if=\"showUnderline &amp;&amp; showTitle\">\n                <div class=\"line\"></div>\n            </div>\n            <h2 class=\"mbr-section-subtitle mbr-fonts-style mbr-light\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n            </h2>\n        </div>\n        <div class=\"slider-box\" data-autoplay=\"{{autoplay}}\" data-delay=\"{{delay}}\">\n            <amp-carousel class=\"carousel\" height=\"9\" width=\"16\" layout=\"responsive\" type=\"slides\" id=\"carousel1\" loop=\"\" on=\"slideChange:AMP.setState({selectedSlide: event.index})\">\n                <amp-img class=\"carousel-img mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/christmas-minis-2018-945x756.jpg\" height=\"9\" width=\"11.25\" layout=\"responsive\" alt=\"Mobirise\">\n                    <div placeholder=\"\">\n                        <div class=\"mobirise-spinner\">\n                            <em></em>\n                            <em></em>\n                            <em></em>\n                        </div>\n                    </div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/christmas-minis-2018-945x756.jpg\" alt=\"Mobirise\" title=\"\">\n                </amp-img>\n                <amp-img class=\"carousel-img mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/blue-and-red-mistletoe-christmas-holiday-photo-collage-2-945x756.jpg\" mbr-class=\"{'super-hide': imagesAmount < 2}\" height=\"9\" width=\"11.25\" layout=\"responsive\" alt=\"Christmas Minis Nottingham Derby Eastwood Giltbrook Mansfield Heanor Ilkeston\">\n                    <div placeholder=\"\">\n                        <div class=\"mobirise-spinner\">\n                            <em></em>\n                            <em></em>\n                            <em></em>\n                        </div>\n                    </div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/blue-and-red-mistletoe-christmas-holiday-photo-collage-2-945x756.jpg\" alt=\"Christmas Minis Nottingham Derby Eastwood Giltbrook Mansfield Heanor Ilkeston\" title=\"Christmas Minis Nottingham Derby Eastwood Giltbrook Mansfield Heanor Ilkeston\">\n                </amp-img>\n                <amp-img class=\"carousel-img mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/03.jpg\" mbr-class=\"{'super-hide': imagesAmount < 3}\" height=\"9\" width=\"13.5\" layout=\"responsive\" alt=\"Mobirise\">\n                    <div placeholder=\"\">\n                        <div class=\"mobirise-spinner\">\n                            <em></em>\n                            <em></em>\n                            <em></em>\n                        </div>\n                    </div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/03.jpg\" alt=\"Mobirise\">\n                </amp-img>\n                <amp-img class=\"carousel-img mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/04.jpg\" mbr-class=\"{'super-hide': imagesAmount < 4}\" height=\"9\" width=\"13.5\" layout=\"responsive\" alt=\"Mobirise\">\n                    <div placeholder=\"\">\n                        <div class=\"mobirise-spinner\">\n                            <em></em>\n                            <em></em>\n                            <em></em>\n                        </div>\n                    </div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/04.jpg\" alt=\"Mobirise\">\n                </amp-img>\n                <amp-img class=\"carousel-img mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/05.jpg\" mbr-class=\"{'super-hide': imagesAmount < 5}\" height=\"9\" width=\"6.494287432351173\" layout=\"responsive\" alt=\"Mobirise\">\n                    <div placeholder=\"\">\n                        <div class=\"mobirise-spinner\">\n                            <em></em>\n                            <em></em>\n                            <em></em>\n                        </div>\n                    </div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/05.jpg\" alt=\"Mobirise\">\n                </amp-img>\n                <amp-img class=\"carousel-img mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/06.jpg\" mbr-class=\"{'super-hide': imagesAmount < 6}\" height=\"9\" width=\"13.5\" layout=\"responsive\" alt=\"Mobirise\">\n                    <div placeholder=\"\">\n                        <div class=\"mobirise-spinner\">\n                            <em></em>\n                            <em></em>\n                            <em></em>\n                        </div>\n                    </div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/06.jpg\" alt=\"Mobirise\">\n                </amp-img>  \n            </amp-carousel>\n            <div class=\"dots-wrapper mbr-row\" mbr-if=\"showBullets\">\n                <p class=\"dots\">\n                    <span role=\"button\" tabindex=\"0\" class=\"current\" on=\"tap:carousel1.goToSlide(index=0)\" [class]=\"selectedSlide == 0 ? 'current' : ''\"></span>\n                </p>\n                <p class=\"dots\" mbr-if=\"imagesAmount > 1\">\n                    <span role=\"button\" tabindex=\"1\" on=\"tap:carousel1.goToSlide(index=1)\" [class]=\"selectedSlide == 1 ? 'current' : ''\"></span>\n                </p>\n                <p class=\"dots\" mbr-if=\"imagesAmount > 2\">\n                    <span role=\"button\" tabindex=\"2\" on=\"tap:carousel1.goToSlide(index=2)\" [class]=\"selectedSlide == 2 ? 'current' : ''\"></span>\n                </p>\n                <p class=\"dots\" mbr-if=\"imagesAmount > 3\">\n                    <span role=\"button\" tabindex=\"3\" on=\"tap:carousel1.goToSlide(index=3)\" [class]=\"selectedSlide == 3 ? 'current' : ''\"></span>\n                </p>\n                <p class=\"dots\" mbr-if=\"imagesAmount > 4\">\n                    <span role=\"button\" tabindex=\"4\" on=\"tap:carousel1.goToSlide(index=4)\" [class]=\"selectedSlide == 4 ? 'current' : ''\"></span>\n                </p>\n                <p class=\"dots\" mbr-if=\"imagesAmount > 5\">\n                    <span role=\"button\" tabindex=\"5\" on=\"tap:carousel1.goToSlide(index=5)\" [class]=\"selectedSlide == 5 ? 'current' : ''\"></span>\n                </p>\n            </div>\n        </div>\n        <div class=\"text-wrap align-center\" mbr-if=\"showText || showButtons\">\n            <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae cupiditate rerum ipsum tempora vero. Fugit facilis possimus assumenda ipsa, sapiente eius sunt fuga saepe nemo. Necessitatibus consequuntur, recusandae consequatur suscipit.\n            </p>\n            <div class=\"mbr-section-btn\" mbr-theme-style=\"display-4\" mbr-buttons=\"\" data-toolbar=\"-mbrBtnMove\" mbr-if=\"showButtons\">\n                <a class=\"btn btn-md btn-secondary-outline\" href=\"https://mobirise.com\">VIEW MORE</a>\n            </div>\n        </div>\n    </div>\n </section>",
+          "_cid": "r7url89DN6",
+          "_anchor": "slider2-6k",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
