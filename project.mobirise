@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "Emilia Reilly Photography",
-    "currentPage": "fine-art-photography.html",
+    "currentPage": "cake-smash-pictures.html",
     "theme": {
       "name": "beautyamp",
       "title": "BeautyAMP",
@@ -38,7 +38,7 @@
     "path": "@PROJECT_PATH@",
     "versionFirst": "4.8.1",
     "siteFonts": [],
-    "uniqCompNum": 556,
+    "uniqCompNum": 559,
     "versionPublish": "4.10.3",
     "screenshot": "screenshot.png",
     "favicon": "",
@@ -7953,6 +7953,122 @@
           "_params": {}
         },
         {
+          "alias": false,
+          "_styles": {
+            "background-color": "@bgColor",
+            "& when not (@fullWidth)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            ".image-block": {
+              "position": "relative",
+              "margin": "auto",
+              "width": "~\"@{videoSize}%\"",
+              "& when (@fullWidth)": {
+                "width": "100% !important"
+              }
+            },
+            "& when (@showText)": {
+              ".mbr-figure-caption": {
+                "position": "absolute",
+                "left": "0",
+                "right": "0",
+                "& when (@captionPos)": {
+                  "bottom": "0"
+                },
+                "& when not (@captionPos)": {
+                  "top": "0"
+                },
+                "&:before": {
+                  "content": "\" \"",
+                  "position": "absolute",
+                  "top": "0",
+                  "left": "0",
+                  "width": "100%",
+                  "height": "100%",
+                  "background": "@captionBg",
+                  "opacity": "@captionOpacity"
+                },
+                ".mbr-text": {
+                  "padding": ".5rem 1rem",
+                  "position": "relative"
+                }
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".image-block": {
+                "width": "100% !important"
+              }
+            }
+          },
+          "_name": "image1",
+          "_customHTML": "<section class=\"image1\" group=\"Images & Videos\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline title=\"Width\" name=\"videoSize\" min=\"20\" max=\"100\" value=\"66\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"checkbox\" title=\"Show Caption\" name=\"showText\">\n        <input type=\"color\" title=\"Caption BG Color\" name=\"captionBg\" value=\"#ffffff\" condition=\"showText\">\n        <input type=\"range\" inline title=\"Caption Opacity\" name=\"captionOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"showText\">\n        <input type=\"checkbox\" title=\"Caption on Top/Bottom\" name=\"captionPos\" checked condition=\"showText\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" condition=\"!fullWidth\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': fullWidth == false}\">\n        <div class=\"image-block\">\n            <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/qp1a8913-web-2048x1463.jpg\" layout=\"responsive\" width=\"1279.475051264525\" height=\"914\" alt=\"cake smash Nottingham\">\n                <div placeholder class=\"placeholder\"></div>\n                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/qp1a8913-web-2048x1463.jpg\" alt=\"cake smash Nottingham\" title=\"cake smash Nottingham\">\n            </amp-img>\n            <div class=\"mbr-figure-caption\" mbr-if=\"showText\">\n                <p mbr-text class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                    Create awesome websites!\n                </p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rPVbEyefzH",
+          "_anchor": "image1-fi",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@bgColor",
+            "& when not (@fullWidth)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            ".image-block": {
+              "position": "relative",
+              "margin": "auto",
+              "width": "~\"@{videoSize}%\"",
+              "& when (@fullWidth)": {
+                "width": "100% !important"
+              }
+            },
+            "& when (@showText)": {
+              ".mbr-figure-caption": {
+                "position": "absolute",
+                "left": "0",
+                "right": "0",
+                "& when (@captionPos)": {
+                  "bottom": "0"
+                },
+                "& when not (@captionPos)": {
+                  "top": "0"
+                },
+                "&:before": {
+                  "content": "\" \"",
+                  "position": "absolute",
+                  "top": "0",
+                  "left": "0",
+                  "width": "100%",
+                  "height": "100%",
+                  "background": "@captionBg",
+                  "opacity": "@captionOpacity"
+                },
+                ".mbr-text": {
+                  "padding": ".5rem 1rem",
+                  "position": "relative"
+                }
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".image-block": {
+                "width": "100% !important"
+              }
+            }
+          },
+          "_name": "image1",
+          "_customHTML": "<section class=\"image1\" group=\"Images & Videos\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline title=\"Width\" name=\"videoSize\" min=\"20\" max=\"100\" value=\"66\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"checkbox\" title=\"Show Caption\" name=\"showText\">\n        <input type=\"color\" title=\"Caption BG Color\" name=\"captionBg\" value=\"#ffffff\" condition=\"showText\">\n        <input type=\"range\" inline title=\"Caption Opacity\" name=\"captionOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"showText\">\n        <input type=\"checkbox\" title=\"Caption on Top/Bottom\" name=\"captionPos\" checked condition=\"showText\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" condition=\"!fullWidth\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': fullWidth == false}\">\n        <div class=\"image-block\">\n            <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/qp1a8878-web-2048x1366.jpg\" layout=\"responsive\" width=\"1280.3748169838946\" height=\"854\" alt=\"cake smash Nottingham\">\n                <div placeholder class=\"placeholder\"></div>\n                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/qp1a8878-web-2048x1366.jpg\" alt=\"cake smash Nottingham\" title=\"cake smah Nottingham\">\n            </amp-img>\n            <div class=\"mbr-figure-caption\" mbr-if=\"showText\">\n                <p mbr-text class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                    Create awesome websites!\n                </p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rPVb5X63Qe",
+          "_anchor": "image1-fh",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
           "_styles": {
             "background-color": "@bgColor",
             "& when not (@fullWidth)": {
@@ -8460,63 +8576,6 @@
           "_customHTML": "<section class=\"image1\" group=\"Images &amp; Videos\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked=\"\">\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline=\"\" title=\"Width\" name=\"videoSize\" min=\"20\" max=\"100\" value=\"66\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"checkbox\" title=\"Show Caption\" name=\"showText\">\n        <input type=\"color\" title=\"Caption BG Color\" name=\"captionBg\" value=\"#ffffff\" condition=\"showText\">\n        <input type=\"range\" inline=\"\" title=\"Caption Opacity\" name=\"captionOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"showText\">\n        <input type=\"checkbox\" title=\"Caption on Top/Bottom\" name=\"captionPos\" checked=\"\" condition=\"showText\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" condition=\"!fullWidth\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': fullWidth == false}\">\n        <div class=\"image-block\">\n            <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/qp1a4284-social-media-2048x1365.jpg\" layout=\"responsive\" width=\"1279.8124542124542\" height=\"853\" alt=\"Nottingham Cake smash and milk bath session Derby, Mansfield, Heanor, Giltbrook, Ilkeston Photographer\">\n                <div placeholder=\"\" class=\"placeholder\"></div>\n                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/qp1a4284-social-media-2048x1365.jpg\" alt=\"Nottingham Cake smash and milk bath session Derby, Mansfield, Heanor, Giltbrook, Ilkeston Photographer\" title=\"Nottingham Cake smash and milk bath session Derby, Mansfield, Heanor, Giltbrook, Ilkeston Photographer\">\n            </amp-img>\n            <div class=\"mbr-figure-caption\" mbr-if=\"showText\">\n                <p mbr-text=\"\" class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                    Create awesome websites!\n                </p>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "rlQSOnuMqA",
           "_anchor": "image1-ad",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "_styles": {
-            "background-color": "@bgColor",
-            "& when not (@fullWidth)": {
-              "padding-top": "(@paddingTop * 15px)",
-              "padding-bottom": "(@paddingBottom * 15px)"
-            },
-            ".image-block": {
-              "position": "relative",
-              "margin": "auto",
-              "width": "~\"@{videoSize}%\"",
-              "& when (@fullWidth)": {
-                "width": "100% !important"
-              }
-            },
-            "& when (@showText)": {
-              ".mbr-figure-caption": {
-                "position": "absolute",
-                "left": "0",
-                "right": "0",
-                "& when (@captionPos)": {
-                  "bottom": "0"
-                },
-                "& when not (@captionPos)": {
-                  "top": "0"
-                },
-                "&:before": {
-                  "content": "\" \"",
-                  "position": "absolute",
-                  "top": "0",
-                  "left": "0",
-                  "width": "100%",
-                  "height": "100%",
-                  "background": "@captionBg",
-                  "opacity": "@captionOpacity"
-                },
-                ".mbr-text": {
-                  "padding": ".5rem 1rem",
-                  "position": "relative"
-                }
-              }
-            },
-            "@media (max-width: 767px)": {
-              ".image-block": {
-                "width": "100% !important"
-              }
-            }
-          },
-          "_name": "image1",
-          "_customHTML": "<section class=\"image1\" group=\"Images &amp; Videos\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked=\"\">\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline=\"\" title=\"Width\" name=\"videoSize\" min=\"20\" max=\"100\" value=\"66\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"checkbox\" title=\"Show Caption\" name=\"showText\">\n        <input type=\"color\" title=\"Caption BG Color\" name=\"captionBg\" value=\"#ffffff\" condition=\"showText\">\n        <input type=\"range\" inline=\"\" title=\"Caption Opacity\" name=\"captionOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"showText\">\n        <input type=\"checkbox\" title=\"Caption on Top/Bottom\" name=\"captionPos\" checked=\"\" condition=\"showText\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" condition=\"!fullWidth\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': fullWidth == false}\">\n        <div class=\"image-block\">\n            <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/qp1a4727-social-media-1365x2048.jpg\" layout=\"responsive\" width=\"1279.6875\" height=\"1920\" alt=\"Nottingham Cake smash and milk bath session Derby, Mansfield, Heanor, Giltbrook, Ilkeston Photographer\">\n                <div placeholder=\"\" class=\"placeholder\"></div>\n                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/qp1a4727-social-media-1365x2048.jpg\" alt=\"Nottingham Cake smash and milk bath session Derby, Mansfield, Heanor, Giltbrook, Ilkeston Photographer\" title=\"Nottingham Cake smash and milk bath session Derby, Mansfield, Heanor, Giltbrook, Ilkeston Photographer\">\n            </amp-img>\n            <div class=\"mbr-figure-caption\" mbr-if=\"showText\">\n                <p mbr-text=\"\" class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                    Create awesome websites!\n                </p>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "rlQUIC50lS",
-          "_anchor": "image1-ag",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
@@ -9268,7 +9327,7 @@
             }
           },
           "_name": "image1",
-          "_customHTML": "<section class=\"image1\" group=\"Images & Videos\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline title=\"Width\" name=\"videoSize\" min=\"20\" max=\"100\" value=\"66\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"checkbox\" title=\"Show Caption\" name=\"showText\">\n        <input type=\"color\" title=\"Caption BG Color\" name=\"captionBg\" value=\"#ffffff\" condition=\"showText\">\n        <input type=\"range\" inline title=\"Caption Opacity\" name=\"captionOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"showText\">\n        <input type=\"checkbox\" title=\"Caption on Top/Bottom\" name=\"captionPos\" checked condition=\"showText\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" condition=\"!fullWidth\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': fullWidth == false}\">\n        <div class=\"image-block\">\n            <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/qp1a8938-ed-grace-4-2560x3584.jpg\" layout=\"responsive\" width=\"1280\" height=\"1792\" alt=\"cake smash photography Giltbrook Nottingham\">\n                <div placeholder class=\"placeholder\"></div>\n                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/qp1a8938-ed-grace-4-2560x3584.jpg\" alt=\"cake smash photography Giltbrook Nottingham\" title=\"cake smash photography Giltbrook Nottingham\">\n            </amp-img>\n            <div class=\"mbr-figure-caption\" mbr-if=\"showText\">\n                <p mbr-text class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                    Create awesome websites!\n                </p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section class=\"image1\" group=\"Images &amp; Videos\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked=\"\">\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline=\"\" title=\"Width\" name=\"videoSize\" min=\"20\" max=\"100\" value=\"66\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"checkbox\" title=\"Show Caption\" name=\"showText\">\n        <input type=\"color\" title=\"Caption BG Color\" name=\"captionBg\" value=\"#ffffff\" condition=\"showText\">\n        <input type=\"range\" inline=\"\" title=\"Caption Opacity\" name=\"captionOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"showText\">\n        <input type=\"checkbox\" title=\"Caption on Top/Bottom\" name=\"captionPos\" checked=\"\" condition=\"showText\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" condition=\"!fullWidth\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': fullWidth == false}\">\n        <div class=\"image-block\">\n            <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/qp1a8938-ed-grace-4-2560x3584.jpg\" layout=\"responsive\" width=\"1280\" height=\"1792\" alt=\"cake smash photography Giltbrook Nottingham\">\n                <div placeholder=\"\" class=\"placeholder\"></div>\n                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/qp1a8938-ed-grace-4-2560x3584.jpg\" alt=\"cake smash photography Giltbrook Nottingham\" title=\"cake smash photography Giltbrook Nottingham\">\n            </amp-img>\n            <div class=\"mbr-figure-caption\" mbr-if=\"showText\">\n                <p mbr-text=\"\" class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                    Create awesome websites!\n                </p>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "rPhzWtNemm",
           "_anchor": "image1-f2",
           "_protectedParams": [],
@@ -17807,6 +17866,64 @@
           "_customHTML": "<section class=\"image1\" group=\"Images &amp; Videos\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked=\"\">\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline=\"\" title=\"Width\" name=\"videoSize\" min=\"20\" max=\"100\" value=\"66\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"checkbox\" title=\"Show Caption\" name=\"showText\">\n        <input type=\"color\" title=\"Caption BG Color\" name=\"captionBg\" value=\"#ffffff\" condition=\"showText\">\n        <input type=\"range\" inline=\"\" title=\"Caption Opacity\" name=\"captionOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"showText\">\n        <input type=\"checkbox\" title=\"Caption on Top/Bottom\" name=\"captionPos\" checked=\"\" condition=\"showText\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" condition=\"!fullWidth\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': fullWidth == false}\">\n        <div class=\"image-block\">\n            <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/qp1a2978-social-media-1365x2048.jpg\" layout=\"responsive\" width=\"1279.6875\" height=\"1920\" alt=\"Family photography Nottingham Giltbrook photographer\">\n                <div placeholder=\"\" class=\"placeholder\"></div>\n                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/qp1a2978-social-media-1365x2048.jpg\" alt=\"Family photography Nottingham Giltbrook photographer\" title=\"Family photography Nottingham Giltbrook photographer\">\n            </amp-img>\n            <div class=\"mbr-figure-caption\" mbr-if=\"showText\">\n                <p mbr-text=\"\" class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                    Create awesome websites!\n                </p>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "rKKNMtcoHn",
           "_anchor": "image1-du",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@bgColor",
+            "& when not (@fullWidth)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            ".image-block": {
+              "position": "relative",
+              "margin": "auto",
+              "width": "~\"@{videoSize}%\"",
+              "& when (@fullWidth)": {
+                "width": "100% !important"
+              }
+            },
+            "& when (@showText)": {
+              ".mbr-figure-caption": {
+                "position": "absolute",
+                "left": "0",
+                "right": "0",
+                "& when (@captionPos)": {
+                  "bottom": "0"
+                },
+                "& when not (@captionPos)": {
+                  "top": "0"
+                },
+                "&:before": {
+                  "content": "\" \"",
+                  "position": "absolute",
+                  "top": "0",
+                  "left": "0",
+                  "width": "100%",
+                  "height": "100%",
+                  "background": "@captionBg",
+                  "opacity": "@captionOpacity"
+                },
+                ".mbr-text": {
+                  "padding": ".5rem 1rem",
+                  "position": "relative"
+                }
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".image-block": {
+                "width": "100% !important"
+              }
+            }
+          },
+          "_name": "image1",
+          "_customHTML": "<section class=\"image1\" group=\"Images & Videos\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline title=\"Width\" name=\"videoSize\" min=\"20\" max=\"100\" value=\"66\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"checkbox\" title=\"Show Caption\" name=\"showText\">\n        <input type=\"color\" title=\"Caption BG Color\" name=\"captionBg\" value=\"#ffffff\" condition=\"showText\">\n        <input type=\"range\" inline title=\"Caption Opacity\" name=\"captionOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"showText\">\n        <input type=\"checkbox\" title=\"Caption on Top/Bottom\" name=\"captionPos\" checked condition=\"showText\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" condition=\"!fullWidth\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': fullWidth == false}\">\n        <div class=\"image-block\">\n            <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/qp1a8958-web-2048x1536.jpg\" layout=\"responsive\" width=\"1280\" height=\"960\" alt=\"Mobirise\">\n                <div placeholder class=\"placeholder\"></div>\n                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/qp1a8958-web-2048x1536.jpg\" alt=\"Mobirise\" title>\n            </amp-img>\n            <div class=\"mbr-figure-caption\" mbr-if=\"showText\">\n                <p mbr-text class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                    Create awesome websites!\n                </p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rPV9YCU18P",
+          "_anchor": "image1-fg",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
@@ -32730,7 +32847,7 @@
             }
           },
           "_name": "image1",
-          "_customHTML": "<section class=\"image1\" group=\"Images &amp; Videos\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked=\"\">\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline=\"\" title=\"Width\" name=\"videoSize\" min=\"20\" max=\"100\" value=\"66\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"checkbox\" title=\"Show Caption\" name=\"showText\">\n        <input type=\"color\" title=\"Caption BG Color\" name=\"captionBg\" value=\"#ffffff\" condition=\"showText\">\n        <input type=\"range\" inline=\"\" title=\"Caption Opacity\" name=\"captionOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"showText\">\n        <input type=\"checkbox\" title=\"Caption on Top/Bottom\" name=\"captionPos\" checked=\"\" condition=\"showText\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" condition=\"!fullWidth\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': fullWidth == false}\">\n        <div class=\"image-block\">\n            <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/qp1a0922-001-domi-pregnancy-photography-notinghamshire-derbyshire-east-midlands-photographer-2048x136512.jpg\" layout=\"responsive\" width=\"1279.8124542124542\" height=\"853\" alt=\"Mobirise\">\n                <div placeholder=\"\" class=\"placeholder\"></div>\n                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/qp1a0922-001-domi-pregnancy-photography-notinghamshire-derbyshire-east-midlands-photographer-2048x136512.jpg\" alt=\"Mobirise\" title=\"\">\n            </amp-img>\n            <div class=\"mbr-figure-caption\" mbr-if=\"showText\">\n                <p mbr-text=\"\" class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                    Create awesome websites!\n                </p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section class=\"image1\" group=\"Images &amp; Videos\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked=\"\">\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline=\"\" title=\"Width\" name=\"videoSize\" min=\"20\" max=\"100\" value=\"66\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"checkbox\" title=\"Show Caption\" name=\"showText\">\n        <input type=\"color\" title=\"Caption BG Color\" name=\"captionBg\" value=\"#ffffff\" condition=\"showText\">\n        <input type=\"range\" inline=\"\" title=\"Caption Opacity\" name=\"captionOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"showText\">\n        <input type=\"checkbox\" title=\"Caption on Top/Bottom\" name=\"captionPos\" checked=\"\" condition=\"showText\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" condition=\"!fullWidth\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': fullWidth == false}\">\n        <div class=\"image-block\">\n            <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/qp1a0922-001-domi-pregnancy-photography-notinghamshire-derbyshire-east-midlands-photographer-2048x136515.jpg\" layout=\"responsive\" width=\"1279.8124542124542\" height=\"853\" alt=\"Mobirise\">\n                <div placeholder=\"\" class=\"placeholder\"></div>\n                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/qp1a0922-001-domi-pregnancy-photography-notinghamshire-derbyshire-east-midlands-photographer-2048x136515.jpg\" alt=\"Mobirise\" title=\"\">\n            </amp-img>\n            <div class=\"mbr-figure-caption\" mbr-if=\"showText\">\n                <p mbr-text=\"\" class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                    Create awesome websites!\n                </p>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "rOYu8cZm4f",
           "_anchor": "image1-f0",
           "_protectedParams": [],
@@ -33194,7 +33311,7 @@
             }
           },
           "_name": "image1",
-          "_customHTML": "<section class=\"image1\" group=\"Images &amp; Videos\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked=\"\">\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline=\"\" title=\"Width\" name=\"videoSize\" min=\"20\" max=\"100\" value=\"66\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"checkbox\" title=\"Show Caption\" name=\"showText\">\n        <input type=\"color\" title=\"Caption BG Color\" name=\"captionBg\" value=\"#ffffff\" condition=\"showText\">\n        <input type=\"range\" inline=\"\" title=\"Caption Opacity\" name=\"captionOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"showText\">\n        <input type=\"checkbox\" title=\"Caption on Top/Bottom\" name=\"captionPos\" checked=\"\" condition=\"showText\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" condition=\"!fullWidth\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': fullWidth == false}\">\n        <div class=\"image-block\">\n            <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/qp1a0970-001-domi-pregnancy-maternity-photography-by-nottinghamshire-derbyshire-photographer-giltbrook-east-midlands-2048x136513.jpg\" layout=\"responsive\" width=\"1279.8124542124542\" height=\"853\" alt=\"Maternity outdoor photoshoot Nottingham Giltbrook NG16\">\n                <div placeholder=\"\" class=\"placeholder\"></div>\n                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/qp1a0970-001-domi-pregnancy-maternity-photography-by-nottinghamshire-derbyshire-photographer-giltbrook-east-midlands-2048x136513.jpg\" alt=\"Maternity outdoor photoshoot Nottingham Giltbrook NG16\" title=\"Maternity outdoor photoshoot Nottingham Giltbrook NG16\">\n            </amp-img>\n            <div class=\"mbr-figure-caption\" mbr-if=\"showText\">\n                <p mbr-text=\"\" class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                    Create awesome websites!\n                </p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section class=\"image1\" group=\"Images &amp; Videos\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked=\"\">\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline=\"\" title=\"Width\" name=\"videoSize\" min=\"20\" max=\"100\" value=\"66\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"checkbox\" title=\"Show Caption\" name=\"showText\">\n        <input type=\"color\" title=\"Caption BG Color\" name=\"captionBg\" value=\"#ffffff\" condition=\"showText\">\n        <input type=\"range\" inline=\"\" title=\"Caption Opacity\" name=\"captionOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"showText\">\n        <input type=\"checkbox\" title=\"Caption on Top/Bottom\" name=\"captionPos\" checked=\"\" condition=\"showText\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" condition=\"!fullWidth\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': fullWidth == false}\">\n        <div class=\"image-block\">\n            <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/qp1a0970-001-domi-pregnancy-maternity-photography-by-nottinghamshire-derbyshire-photographer-giltbrook-east-midlands-2048x136516.jpg\" layout=\"responsive\" width=\"1279.8124542124542\" height=\"853\" alt=\"Maternity outdoor photoshoot Nottingham Giltbrook NG16\">\n                <div placeholder=\"\" class=\"placeholder\"></div>\n                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/qp1a0970-001-domi-pregnancy-maternity-photography-by-nottinghamshire-derbyshire-photographer-giltbrook-east-midlands-2048x136516.jpg\" alt=\"Maternity outdoor photoshoot Nottingham Giltbrook NG16\" title=\"Maternity outdoor photoshoot Nottingham Giltbrook NG16\">\n            </amp-img>\n            <div class=\"mbr-figure-caption\" mbr-if=\"showText\">\n                <p mbr-text=\"\" class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                    Create awesome websites!\n                </p>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "rOYtUpCpyR",
           "_anchor": "image1-ez",
           "_protectedParams": [],
@@ -33542,7 +33659,7 @@
             }
           },
           "_name": "image1",
-          "_customHTML": "<section class=\"image1\" group=\"Images &amp; Videos\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked=\"\">\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline=\"\" title=\"Width\" name=\"videoSize\" min=\"20\" max=\"100\" value=\"66\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"checkbox\" title=\"Show Caption\" name=\"showText\">\n        <input type=\"color\" title=\"Caption BG Color\" name=\"captionBg\" value=\"#ffffff\" condition=\"showText\">\n        <input type=\"range\" inline=\"\" title=\"Caption Opacity\" name=\"captionOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"showText\">\n        <input type=\"checkbox\" title=\"Caption on Top/Bottom\" name=\"captionPos\" checked=\"\" condition=\"showText\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" condition=\"!fullWidth\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': fullWidth == false}\">\n        <div class=\"image-block\">\n            <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/qp1a1150-001-domi-pregnancy-maternity-photo-shoot-nottingham-derby-photography-purple-dress-2048x136514.jpg\" layout=\"responsive\" width=\"1279.8124542124542\" height=\"853\" alt=\"Mobirise\">\n                <div placeholder=\"\" class=\"placeholder\"></div>\n                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/qp1a1150-001-domi-pregnancy-maternity-photo-shoot-nottingham-derby-photography-purple-dress-2048x136514.jpg\" alt=\"Mobirise\" title=\"\">\n            </amp-img>\n            <div class=\"mbr-figure-caption\" mbr-if=\"showText\">\n                <p mbr-text=\"\" class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                    Create awesome websites!\n                </p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section class=\"image1\" group=\"Images &amp; Videos\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked=\"\">\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline=\"\" title=\"Width\" name=\"videoSize\" min=\"20\" max=\"100\" value=\"66\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"checkbox\" title=\"Show Caption\" name=\"showText\">\n        <input type=\"color\" title=\"Caption BG Color\" name=\"captionBg\" value=\"#ffffff\" condition=\"showText\">\n        <input type=\"range\" inline=\"\" title=\"Caption Opacity\" name=\"captionOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"showText\">\n        <input type=\"checkbox\" title=\"Caption on Top/Bottom\" name=\"captionPos\" checked=\"\" condition=\"showText\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" condition=\"!fullWidth\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': fullWidth == false}\">\n        <div class=\"image-block\">\n            <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/qp1a1150-001-domi-pregnancy-maternity-photo-shoot-nottingham-derby-photography-purple-dress-2048x136517.jpg\" layout=\"responsive\" width=\"1279.8124542124542\" height=\"853\" alt=\"Mobirise\">\n                <div placeholder=\"\" class=\"placeholder\"></div>\n                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/qp1a1150-001-domi-pregnancy-maternity-photo-shoot-nottingham-derby-photography-purple-dress-2048x136517.jpg\" alt=\"Mobirise\" title=\"\">\n            </amp-img>\n            <div class=\"mbr-figure-caption\" mbr-if=\"showText\">\n                <p mbr-text=\"\" class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                    Create awesome websites!\n                </p>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "rOYuppAyWN",
           "_anchor": "image1-f1",
           "_protectedParams": [],
